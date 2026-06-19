@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Você ♥</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Tela inicial -->
+  <div id="tela-inicio" class="tela ativa">
+    <div class="inicio-conteudo">
+      <p class="inicio-subtitulo">Uma surpresa especial</p>
+      <h1 class="inicio-titulo">Para o amor da minha vida</h1>
+      <button id="btn-iniciar" class="btn-iniciar">▶ Iniciar</button>
+      <p class="inicio-dica">Use tela cheia para a melhor experiência</p>
+    </div>
+  </div>
+
+  <!-- Player principal -->
+  <div id="player" class="player oculto">
+    <!-- Camadas de imagem (crossfade) -->
+    <div class="camada-imagem ativa" id="camada-a">
+      <div class="camada-blur"></div>
+      <img class="camada-foto" alt="" />
+    </div>
+    <div class="camada-imagem" id="camada-b">
+      <div class="camada-blur"></div>
+      <img class="camada-foto" alt="" />
+    </div>
+
+    <!-- Overlay escuro -->
+    <div class="overlay"></div>
+
+    <!-- Texto narrativo -->
+    <div id="texto-container" class="texto-container oculto">
+      <p id="texto-frase" class="texto-frase"></p>
+      <p id="texto-subfrase" class="texto-subfrase"></p>
+    </div>
+
+    <!-- Tela de balão -->
+    <div id="balao-container" class="balao-container oculto">
+      <div class="balao-circulo" id="balao-circulo">
+        <span class="balao-numero" id="balao-numero">1</span>
+      </div>
+      <p class="balao-frase" id="balao-frase"></p>
+      <p class="balao-subfrase" id="balao-subfrase"></p>
+      <div class="balao-timer">
+        <div class="balao-timer-barra" id="balao-timer-barra"></div>
+      </div>
+      <p class="balao-contagem" id="balao-contagem"></p>
+    </div>
+
+    <!-- Tela final -->
+    <div id="final-container" class="final-container oculto">
+      <div class="final-coracao">♥</div>
+    </div>
+
+    <!-- Barra de progresso geral -->
+    <div class="progresso-geral" id="progresso-geral">
+      <div class="progresso-geral-barra" id="progresso-geral-barra"></div>
+    </div>
+  </div>
+
+  <audio id="audio-musica" preload="auto"></audio>
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
